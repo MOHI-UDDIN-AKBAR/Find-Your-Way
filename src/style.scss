@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+//all mixin
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+}
+
+.findYourWay {
+  width: 100%;
+  .header {
+    width: 100%;
+  }
+  .mainSection {
+    @include flexCenter(space-between, row);
+    .map {
+      width: 54%;
+      padding: 2.5rem;
+      height: 80vh;
+    }
+    .list {
+      width: 46%;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .findYourWay {
+    width: 100%;
+    .mainSection {
+      @include flexCenter(center, row);
+      .map {
+        width: 55%;
+        padding: 2rem;
+      }
+      .list {
+        width: 40%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .findYourWay {
+    width: 100%;
+    .mainSection {
+      @include flexCenter(center, column);
+      .map {
+        width: 100%;
+        padding: 2.5rem;
+        height: 50vh;
+      }
+      .list {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .findYourWay {
+    width: 100%;
+    .mainSection {
+      @include flexCenter(center, column);
+      .map {
+        width: 100%;
+        padding: 1.5rem;
+        height: 60vh;
+      }
+      .list {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .findYourWay {
+    width: 100%;
+    .mainSection {
+      @include flexCenter(space-between, row);
+      .map {
+        width: 60%;
+        padding: 4rem;
+      }
+      .list {
+        width: 38%;
+      }
+    }
+  }
+}
+
+//style for header
+.header {
+  background-color: rgb(48, 48, 131);
+  @include flexCenter(space-between, row);
+  color: white;
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+  margin: 0 auto;
+
+  .logo {
+    width: 35%;
+    padding: 0.3rem;
+    padding: 0.3rem 1rem;
+    margin: 0 auto;
+    h2 {
+      font-size: 20px;
+      margin: 0 auto;
+      padding: 0.2rem;
+    }
+  }
+  .searchSection {
+    margin: 0 auto;
+    padding-right: 1rem;
+    @include flexCenter(center, row);
+    h3 {
+      margin-top: 2px;
+      margin-bottom: 2px;
+
+      margin-right: 15px;
+      padding: 0.2rem;
+      font-size: 17px;
+    }
+    .searchArea {
+      position: relative;
+      padding: 0.3rem;
+      input {
+        width: 260px;
+        font-size: 17px;
+        padding: 0.5rem 1rem;
+        padding-left: 2.6rem;
+        border-radius: 8px;
+        border: none;
+        background-color: rgb(234, 234, 255);
+        color: #1f2633;
+        &::placeholder {
+          color: #1f2633;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      span {
+        position: absolute;
+        font-size: 22px;
+        top: 10px;
+        left: 13px;
+        color: rgb(110, 110, 179);
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    @include flexCenter(center, column);
+    width: 100%;
+    .logo {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .searchSection {
+      padding-right: 0rem;
+      width: 100%;
+      @include flexCenter(center, column);
+
+      input {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header {
+    @include flexCenter(center, row);
+    width: 100%;
+    .logo {
+      margin: 0 auto;
+    }
+    .searchSection {
+      @include flexCenter(center, row);
+      margin: 0 auto;
+      input {
+        width: 250px;
+      }
+    }
+  }
+}
+
+img {
+  width: 100px;
+}
+
+//style for List
+.list {
+  @include flexCenter(center, column);
+  padding: 0 1rem;
+  .firstPart {
+    width: 100%;
+    @include flexCenter(center, column);
+    h1 {
+      color: #1f2633;
+      margin: 5px auto;
+      margin-top: 10px;
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+    span {
+      width: 65%;
+      color: #2a364b;
+      padding: 0.3rem 0;
+      font-size: 18px;
+      margin-top: 0;
+    }
+    .type {
+      width: 70%;
+      margin: 7px auto;
+      @include flexCenter(flex-start, row);
+      select {
+        border: 1px solid rgb(79, 79, 160);
+        width: 160px;
+        font-size: 17px;
+        padding: 0.4rem 0.8rem;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        background-color: white;
+      }
+    }
+  }
+  .secondPart {
+    width: 100%;
+    height: 80vh;
+    overflow: scroll;
+    margin-top: 10px;
+    height: 85vh;
+    .placeDetails {
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      .image {
+        width: 100%;
+        @include flexCenter(center, row);
+        img {
+          width: 75%;
+          height: 350px;
+          object-fit: cover;
+          border-radius: 15px;
+          box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+        }
+      }
+      .details {
+        margin-top: 10px;
+        width: 100%;
+        @include flexCenter(center, column);
+        .name {
+          width: 92%;
+          margin-top: 7px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          span {
+            font-weight: bold;
+            color: #335aa3;
+            font-size: 20px;
+          }
+        }
+        .info {
+          width: 95%;
+          @include flexCenter(space-between, row);
+          margin: 4px auto;
+          color: rgb(88, 88, 88);
+          span {
+            &:first-child {
+              font-weight: bold;
+              color: #272f3f;
+              font-size: 17px;
+            }
+          }
+        }
+        .award {
+          @extend .info;
+          width: 100%;
+          @include flexCenter(space-between, row);
+          // margin: 0 auto;
+        }
+        .ingredients {
+          width: 95%;
+          @include flexCenter(center, row);
+          span {
+            background-color: #4b5c7e;
+            color: white;
+            margin: 7px 10px;
+            font-size: 14px;
+            padding: 0.4rem;
+            border-radius: 5px;
+          }
+        }
+        .info {
+          h4 {
+            color: rgb(99, 99, 189);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .placeDetails {
+    img {
+      height: 250px;
+    }
+  }
+}
+@media screen and (min-width: 700px) {
+  .placeDetails {
+    img {
+      height: 280px;
+    }
+  }
+}
+
+//scrool bar style
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+// style for link
+a {
+  text-decoration: none;
+  color: rgb(99, 99, 189);
+}
+
+.forDesktop {
+  width: 120px;
+  background-color: white;
+  padding: 0.5rem 0.6rem;
+  @include flexCenter(center, column);
+  z-index: 0;
+  cursor: pointer;
+  margin: 5px auto;
+  span {
+    color: #1f2633;
+    margin: 0 auto;
+    padding: 0.3rem 0;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .rating {
+    width: 100%;
+    @include flexCenter(center, row);
+    span {
+      @include flexCenter(center, row);
+      color: #1f2633;
+    }
+  }
+  &:hover {
+    transform: scale(1.2, 1.2);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+  }
+}
