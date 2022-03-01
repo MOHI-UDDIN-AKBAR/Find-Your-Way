@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 .findYourWay {
@@ -438,4 +443,9 @@ a {
   top: 0px;
   z-index: 1;
   overflow: hidden;
+}
+
+.forMobile span {
+  color: #3b3bbb;
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */
