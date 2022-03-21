@@ -1,6 +1,6 @@
 # Find Your Way
-### Find Your Way is a responsive e-commerce website with html, css, scss, ReactJs,public api
- <img align="center" alt="GIF" src="https://user-images.githubusercontent.com/97860664/159208863-f1d4e015-d161-4f39-9321-2ebf201511d3.png" width="700" height="420" />
+### Find Your Way is a responsive website with html, css, scss, ReactJs and public api
+ <img align="center" alt="GIF" src="https://user-images.githubusercontent.com/97860664/159209723-227c33cc-89bd-4844-9a57-15b19a03122a.png" width="700" height="420" />
 
 ## Table of contents
 * [General info](#general-info)
