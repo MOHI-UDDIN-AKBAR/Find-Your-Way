@@ -1,3 +1,36 @@
+# Find Your Way
+### Find Your Way is a responsive e-commerce website with html, css, scss, ReactJs,public api
+ <img align="center" alt="GIF" src="https://user-images.githubusercontent.com/97860664/159208863-f1d4e015-d161-4f39-9321-2ebf201511d3.png" width="700" height="420" />
+
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Feature To Do:](#feature-to-do)
+
+
+
+## General info
+This is a website which will make user journey more exciting. User will have opportunity to search place and according to search the website will be able to show restaurants, hotels, and attractions.
+## Technologies
+  Project is created with:
+* HTML
+* CSS
+* SCSS
+* JAVASCRIPT
+* FIREBASE
+* ES6
+* public api
+
+## Feature To Do:
+
+### user 
+In this website we grab the google map to show user location. So user can see user location after allow the location. Beside the map, a list of  restaurants, hotels, and attractions will come up. 
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
